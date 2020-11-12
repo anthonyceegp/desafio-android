@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="layout_padding">24dp</dimen>
+    <dimen name="button_padding">16dp</dimen>
+    <dimen name="card_image">241dp</dimen>
+</resources>

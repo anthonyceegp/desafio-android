@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/storeListFragment">
+
+    <fragment
+        android:id="@+id/storeListFragment"
+        android:name="com.example.digitalhousefoods.StoreListFragment"
+        android:label="fragment_store_list"
+        tools:layout="@layout/fragment_store_list" >
+        <action
+            android:id="@+id/action_storeListFragment_to_storeMenuFragment"
+            app:destination="@id/storeMenuFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/storeMenuFragment"
+        android:name="com.example.digitalhousefoods.StoreMenuFragment"
+        android:label="fragment_store_menu"
+        tools:layout="@layout/fragment_store_menu" >
+        <action
+            android:id="@+id/action_storeMenuFragment_to_dishDetailFragment"
+            app:destination="@id/dishDetailFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/dishDetailFragment"
+        android:name="com.example.digitalhousefoods.DishDetailFragment"
+        android:label="fragment_dish_detail"
+        tools:layout="@layout/fragment_dish_detail" />
+</navigation>
