@@ -9,7 +9,6 @@ import com.google.android.material.textfield.TextInputEditText
 import com.google.android.material.textfield.TextInputLayout
 
 class LoginActivity : AppCompatActivity() {
-    private val toolbar by lazy { findViewById<Toolbar>(R.id.default_appbar) }
     private val tilEmail by lazy { findViewById<TextInputLayout>(R.id.til_email_login) }
     private val tieEmail by lazy { findViewById<TextInputEditText>(R.id.tie_email_login) }
     private val tilPassword by lazy { findViewById<TextInputLayout>(R.id.til_password_login) }
@@ -21,12 +20,10 @@ class LoginActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_login)
 
-        setSupportActionBar(toolbar)
-
         btnLogin.setOnClickListener {
             clearFieldsError()
             if(validateFields()){
-                intent = Intent(this, MainActivity::class.java)
+                intent = Intent(this, StoreListActivity::class.java)
                 startActivity(intent)
             }
         }

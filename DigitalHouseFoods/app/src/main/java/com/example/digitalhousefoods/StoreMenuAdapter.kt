@@ -31,6 +31,7 @@ class StoreMenuViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
 
     fun bind(dish: Dish, onDishClickListener: OnDishClickListener) {
         image.setImageResource(dish.image)
+        image.contentDescription = dish.name
         title.text = dish.name
 
         itemView.setOnClickListener {

@@ -4,10 +4,10 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
+    android:layout_margin="@dimen/card_margin"
     android:clickable="true"
     android:focusable="true"
-    app:cardCornerRadius="10dp"
-    android:layout_margin="8dp">
+    app:cardCornerRadius="@dimen/card_radius">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -17,7 +17,7 @@
         <ImageView
             android:id="@+id/image_card"
             android:layout_width="match_parent"
-            android:layout_height="@dimen/card_image"
+            android:layout_height="@dimen/store_card_image_height"
             android:contentDescription="@string/store_image"
             android:scaleType="centerCrop"
             tools:srcCompat="@drawable/store_image" />
@@ -25,33 +25,33 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:padding="16dp">
+            android:layout_margin="@dimen/card_body_margin"
+            android:orientation="vertical">
 
             <TextView
                 android:id="@+id/title_card"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:textAppearance="?attr/textAppearanceHeadline6"
-                tools:text="Outback" />
+                android:textColor="@color/colorCardTitle"
+                android:textSize="@dimen/titles"
+                android:textStyle="bold"
+                tools:text="Store name" />
 
             <TextView
                 android:id="@+id/address_card"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:textAppearance="?attr/textAppearanceBody2"
-                android:textColor="?android:attr/textColorSecondary"
-                tools:text="Av. Moaci, 187, Moerma, São Paulo" />
+                android:textColor="@color/colorCardBody"
+                android:textSize="@dimen/card_body_text"
+                tools:text="Store address" />
 
             <TextView
                 android:id="@+id/closing_time"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:textAppearance="?attr/textAppearanceBody2"
-                android:textColor="?android:attr/textColorSecondary"
-                tools:text="Fecha às 00:00" />
+                android:textColor="@color/colorCardBody"
+                android:textSize="@dimen/card_body_text"
+                tools:text="Closing time" />
         </LinearLayout>
-
     </LinearLayout>
-
 </com.google.android.material.card.MaterialCardView>

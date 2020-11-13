@@ -15,8 +15,7 @@ class Store(
         parcel.readString()!!,
         parcel.readString()!!,
         parcel.createTypedArrayList(Dish)!!
-    ) {
-    }
+    )
 
     override fun writeToParcel(parcel: Parcel, flags: Int) {
         parcel.writeInt(image)

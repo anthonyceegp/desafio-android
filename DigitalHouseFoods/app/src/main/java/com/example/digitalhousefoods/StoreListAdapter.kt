@@ -1,5 +1,6 @@
 package com.example.digitalhousefoods
 
+import android.annotation.SuppressLint
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -31,11 +32,13 @@ class StoreViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
     val address = itemView.findViewById<TextView>(R.id.address_card)
     val closingTime = itemView.findViewById<TextView>(R.id.closing_time)
 
+    @SuppressLint("SetTextI18n")
     fun bind(store: Store, onStoreClickListener: OnStoreClickListener) {
         image.setImageResource(store.image)
+        image.contentDescription = store.name
         title.text = store.name
         address.text = store.address
-        closingTime.text = "Fecha às " + store.closingTime
+        closingTime.text = """Fecha às ${store.closingTime}"""
 
         itemView.setOnClickListener {
             onStoreClickListener.onStoreClick(adapterPosition)

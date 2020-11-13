@@ -3,11 +3,11 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content"
+    android:layout_height="@dimen/card_dish_height"
+    android:layout_margin="@dimen/card_margin"
     android:clickable="true"
     android:focusable="true"
-    app:cardCornerRadius="10dp"
-    android:layout_margin="8dp">
+    app:cardCornerRadius="@dimen/card_radius">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -17,29 +17,29 @@
         <ImageView
             android:id="@+id/image_menu"
             android:layout_width="match_parent"
-            android:layout_height="@dimen/card_image"
-            android:contentDescription="@string/store_image"
+            android:layout_height="@dimen/card_dish_image_height"
+            android:contentDescription="@string/dish_image"
             android:scaleType="centerCrop"
             tools:srcCompat="@drawable/dish_image" />
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="@dimen/card_dish_body_height"
             android:orientation="vertical"
-            android:padding="16dp">
+            android:padding="@dimen/card_body_margin">
 
             <TextView
                 android:id="@+id/title_menu"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:textSize="24sp"
-                android:textColor="@color/darkGrey"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:ellipsize="end"
                 android:gravity="center"
                 android:maxLines="2"
-                android:ellipsize="end"
-                tools:text="Outback" />
+                android:textColor="@color/colorDishDetailText"
+                android:textSize="@dimen/card_body_text"
+                android:textStyle="bold"
+                tools:text="Dish description" />
         </LinearLayout>
-
     </LinearLayout>
-
 </com.google.android.material.card.MaterialCardView>

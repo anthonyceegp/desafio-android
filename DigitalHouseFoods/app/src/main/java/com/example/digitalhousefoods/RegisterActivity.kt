@@ -9,7 +9,6 @@ import com.google.android.material.textfield.TextInputEditText
 import com.google.android.material.textfield.TextInputLayout
 
 class RegisterActivity : AppCompatActivity() {
-    private val toolbar by lazy { findViewById<Toolbar>(R.id.default_appbar) }
     private val tilName by lazy { findViewById<TextInputLayout>(R.id.til_name_register) }
     private val tieName by lazy { findViewById<TextInputEditText>(R.id.tie_name_register) }
     private val tilEmail by lazy { findViewById<TextInputLayout>(R.id.til_email_register) }
@@ -24,8 +23,6 @@ class RegisterActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_register)
 
-        setSupportActionBar(toolbar)
-
         supportActionBar?.apply {
             setDisplayHomeAsUpEnabled(true)
             title = getString(R.string.register)
@@ -34,7 +31,7 @@ class RegisterActivity : AppCompatActivity() {
         btnRegister.setOnClickListener {
             clearFieldsError()
             if (validateFields()) {
-                intent = Intent(this, MainActivity::class.java)
+                intent = Intent(this, StoreListActivity::class.java)
                 startActivity(intent)
                 finish()
             }

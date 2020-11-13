@@ -3,9 +3,14 @@
     <color name="colorPrimary">#3F51B5</color>
     <color name="colorPrimaryDark">#303F9F</color>
     <color name="colorAccent">#03DAC5</color>
-    <color name="red">#FF5252</color>
-    <color name="grey">#8492A6</color>
-    <color name="darkGrey">#5A6978</color>
-    <color name="white">#FFFFFF</color>
-    <color name="lightBlue">#3F51B5</color>
+    <color name="colorPrimaryButton">#FF5252</color>
+    <color name="colorSecondaryButton">#8492A6</color>
+    <color name="colorHintText">#8492A6</color>
+    <color name="colorDishDetailText">#5A6978</color>
+    <color name="colorTitleToolbar">#FFFFFF</color>
+    <color name="colorTextField">#3F51B5</color>
+    <color name="colorCardTitle">#1F2D3D</color>
+    <color name="colorCardBody">#8492A6</color>
+    <color name="colorStoreListBackground">#DDDDDD</color>
+    <color name="colorStoreMenuBackground">#FDFDFD</color>
 </resources>

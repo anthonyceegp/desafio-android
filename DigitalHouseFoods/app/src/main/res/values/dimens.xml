@@ -1,6 +1,23 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <dimen name="layout_padding">24dp</dimen>
     <dimen name="button_padding">16dp</dimen>
-    <dimen name="card_image">241dp</dimen>
+    <dimen name="store_card_image_height">241dp</dimen>
+    <dimen name="login_registration_margin">24dp</dimen>
+    <dimen name="margin_between_field">8dp</dimen>
+    <dimen name="login_margin_top_button">64dp</dimen>
+    <dimen name="text_size_14sp">14sp</dimen>
+    <dimen name="toolbar_height">280dp</dimen>
+    <dimen name="offset_toolbar_title">24dp</dimen>
+    <dimen name="titles">24sp</dimen>
+    <dimen name="main_dishes_margin_horizontal">8dp</dimen>
+    <dimen name="main_dishes_margin_top">24dp</dimen>
+    <dimen name="main_dishes_margin_bottom">8dp</dimen>
+    <dimen name="card_radius">10dp</dimen>
+    <dimen name="card_margin">8dp</dimen>
+    <dimen name="card_body_margin">16dp</dimen>
+    <dimen name="card_body_text">16sp</dimen>
+    <dimen name="card_dish_image_height">146dp</dimen>
+    <dimen name="card_dish_body_height">72dp</dimen>
+    <dimen name="card_dish_height">218dp</dimen>
+    <dimen name="dish_description_text_size">16sp</dimen>
 </resources>
