@@ -8,8 +8,9 @@
     <string name="name">Name</string>
     <string name="repeat_password">Repeat password</string>
     <string name="required_field">This field is required!</string>
-    <string name="password_match">Passoword doesn\'t match</string>
+    <string name="password_match">Password doesn\'t match</string>
     <string name="store_image">Store image</string>
     <string name="pratos_principais">Pratos principais</string>
     <string name="dish_image">Dish image</string>
+    <string name="fecha_as">Fecha às %1$s</string>
 </resources>

@@ -26,8 +26,8 @@ class StoreMenuAdapter(
 }
 
 class StoreMenuViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
-    val image = itemView.findViewById<ImageView>(R.id.image_menu)
-    val title = itemView.findViewById<TextView>(R.id.title_menu)
+    private val image: ImageView = itemView.findViewById(R.id.image_menu)
+    private val title: TextView = itemView.findViewById(R.id.title_menu)
 
     fun bind(dish: Dish, onDishClickListener: OnDishClickListener) {
         image.setImageResource(dish.image)

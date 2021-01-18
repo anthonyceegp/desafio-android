@@ -3,7 +3,7 @@ package com.example.digitalhousefoods
 import android.os.Parcel
 import android.os.Parcelable
 
-class Dish (val image: Int, val name: String, val description: String): Parcelable {
+data class Dish (val image: Int, val name: String, val description: String): Parcelable {
     constructor(parcel: Parcel) : this(
         parcel.readInt(),
         parcel.readString()!!,

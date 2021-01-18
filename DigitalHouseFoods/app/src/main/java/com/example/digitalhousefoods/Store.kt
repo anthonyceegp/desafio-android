@@ -3,7 +3,7 @@ package com.example.digitalhousefoods
 import android.os.Parcel
 import android.os.Parcelable
 
-class Store(
+data class Store(
     val image: Int,
     val name: String,
     val address: String,

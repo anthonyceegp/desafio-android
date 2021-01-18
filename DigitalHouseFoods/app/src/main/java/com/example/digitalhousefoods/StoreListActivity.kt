@@ -25,7 +25,7 @@ class StoreListActivity : AppCompatActivity(), OnStoreClickListener {
 
     override fun onStoreClick(position: Int) {
         intent = Intent(this, StoreMenuActivity::class.java)
-        intent.putExtra("STORE", storeList[position])
+        intent.putExtra(Constant.STORE, storeList[position])
 
         startActivity(intent)
     }

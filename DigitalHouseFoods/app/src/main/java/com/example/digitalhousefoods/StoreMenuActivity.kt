@@ -14,7 +14,7 @@ class StoreMenuActivity : AppCompatActivity(), OnDishClickListener {
     private val toolbar by lazy { findViewById<MaterialToolbar>(R.id.store_menu_toolbar) }
     private val toolbarTitle by lazy { findViewById<TextView>(R.id.store_menu_toolbar_title) }
     private val recycler by lazy { findViewById<RecyclerView>(R.id.store_menu_recycler) }
-    private val store by lazy { intent.getParcelableExtra<Store>("STORE") }
+    private val store by lazy { intent.getParcelableExtra<Store>(Constant.STORE) }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -46,7 +46,7 @@ class StoreMenuActivity : AppCompatActivity(), OnDishClickListener {
 
     override fun onDishClick(position: Int) {
         intent = Intent(this, DishDetailActivity::class.java)
-        intent.putExtra("DISH", store!!.dishList[position])
+        intent.putExtra(Constant.DISH, store!!.dishList[position])
 
         startActivity(intent)
     }

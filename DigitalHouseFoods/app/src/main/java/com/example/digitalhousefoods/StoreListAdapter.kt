@@ -1,6 +1,6 @@
 package com.example.digitalhousefoods
 
-import android.annotation.SuppressLint
+import android.content.Context
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -15,7 +15,9 @@ class StoreListAdapter(
     RecyclerView.Adapter<StoreViewHolder>() {
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): StoreViewHolder {
         return StoreViewHolder(
-            LayoutInflater.from(parent.context).inflate(R.layout.store_list_item, parent, false)
+            LayoutInflater.from(parent.context)
+                .inflate(R.layout.store_list_item, parent, false),
+            parent.context
         )
     }
 
@@ -26,19 +28,22 @@ class StoreListAdapter(
     }
 }
 
-class StoreViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
-    val image = itemView.findViewById<ImageView>(R.id.image_card)
-    val title = itemView.findViewById<TextView>(R.id.title_card)
-    val address = itemView.findViewById<TextView>(R.id.address_card)
-    val closingTime = itemView.findViewById<TextView>(R.id.closing_time)
+class StoreViewHolder(
+    itemView: View,
+    private val context: Context
+) : RecyclerView.ViewHolder(itemView) {
 
-    @SuppressLint("SetTextI18n")
+    private val image: ImageView = itemView.findViewById(R.id.image_card)
+    private val title: TextView = itemView.findViewById(R.id.title_card)
+    private val address: TextView = itemView.findViewById(R.id.address_card)
+    private val closingTime: TextView = itemView.findViewById(R.id.closing_time)
+
     fun bind(store: Store, onStoreClickListener: OnStoreClickListener) {
         image.setImageResource(store.image)
         image.contentDescription = store.name
         title.text = store.name
         address.text = store.address
-        closingTime.text = """Fecha às ${store.closingTime}"""
+        closingTime.text = context.getString(R.string.fecha_as, store.closingTime)
 
         itemView.setOnClickListener {
             onStoreClickListener.onStoreClick(adapterPosition)

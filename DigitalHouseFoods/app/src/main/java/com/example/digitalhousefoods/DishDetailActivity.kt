@@ -11,7 +11,7 @@ class DishDetailActivity : AppCompatActivity() {
     private val toolbar by lazy { findViewById<MaterialToolbar>(R.id.dish_detail_toolbar) }
     private val toolbarTitle by lazy { findViewById<TextView>(R.id.dish_detail_toolbar_title) }
     private val description by lazy { findViewById<TextView>(R.id.dish_description) }
-    private val dish by lazy { intent.getParcelableExtra<Dish>("DISH") }
+    private val dish by lazy { intent.getParcelableExtra<Dish>(Constant.DISH) }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
